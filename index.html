@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="form-sheet">
+
+      <figure>
+        <img src="./img/rcpd-logo.webp" alt="Raccon City Police Department Logo">
+      </figure>
+      <h1 id="title">R.C.P.D. Survey Form</h1>
+      <p id="description">Thank you for helping us make our city safer!</p>
+      
+      <form id="survey-form" action="/" method="post">
+        
+        <section>
+          <h2>Personal Data</h2>
+          <hr>
+          <fieldset>
+            <label id="name-label" for="name">
+              First Name <span>*</span>
+              <input type="text" id="name" name="name" placeholder="your name..." required>
+            </label>
+            <label id="label-last-name" for="last-name">
+              Last Name <span>*</span>
+              <input type="text" id="last-name" name="last-name" placeholder="your last name..." required>
+            </label>
+            <label id="label-email" for="email">
+              Email <span>*</span>
+              <input type="email" id="email" name="email" placeholder="example@mail.com" required>
+            </label>
+            <label id="number-label" for="age">
+              Age
+              <input type="number" name="age" id="age" min="8" max="120" placeholder="18">
+            </label>
+          </fieldset>
+        </section>
+        
+        <section>
+          <h2>How many patrols should pass through your neighborhood?</h2>
+          <hr>
+          <fieldset>
+            <select name="patrols" id="dropdown">
+              <option value="">-- select an option--</option>
+              <option value="2">2 Patrols</option>
+              <option value="">3 Patrols</option>
+              <option value="">4 Patrols</option>
+              <option value="">Send the S.T.A.R.S.</option>
+            </select>
+          </fieldset>
+        </section>
+
+        <section>
+          <h2>Are you satisfied with the direction of Chief Irons in the R.C.P.D. <span>*</span></h2>
+          <hr>
+          <fieldset>
+            <label class="radio-label" for="very-satisfied">
+              <input class="inline" type="radio" id="very-satisfied" value="very-satisfied" name="satisfaction" checked>
+              Very satisfied
+            </label>
+            <label class="radio-label" for="satisfied">
+              <input class="inline" type="radio" id="satisfied" value="satisfied" name="satisfaction">
+              Satisfied
+            </label>
+            <label class="radio-label" for="not-sure">
+              <input class="inline" type="radio" id="not-sure" value="not-sure" name="satisfaction">
+              I'm not sure
+            </label>
+            <label class="radio-label" for="not-satisfied">
+              <input class="inline" type="radio" id="not-satisfied" value="not-satisfied" name="satisfaction">
+              Not satisfied
+            </label>
+          </fieldset>
+        </section>
+
+        <section>
+          <h2>What areas of Raccon City do you think need more surveillance? (check all that apply)</h2>
+          <hr>
+          <fieldset>
+            <label class="checkbox-label" for="raccon-city-zoo">
+              <input class="inline" type="checkbox" name="zones" value="raccon-city-zoo" id="raccon-city-zoo">
+              Raccon City Zoo
+            </label>
+            <label class="checkbox-label" for="raccon-mall">
+              <input class="inline" type="checkbox" name="zones" value="raccon-mall" id="raccon-mall">
+              Raccon Mall
+            </label>
+            <label class="checkbox-label" for="spencer-memorial-hospital">
+              <input class="inline" type="checkbox" name="zones" value="spencer-memorial-hospital" id="spencer-memorial-hospital">
+              Spencer Memorial Hospital
+            </label>
+            <label class="checkbox-label" for="raccon-university">
+              <input class="inline" type="checkbox" name="zones" value="raccon-university" id="raccon-university">
+              Raccon University
+            </label>
+            <label class="checkbox-label" for="orphanage">
+              <input class="inline" type="checkbox" name="zones" value="orphanage" id="orphanage">
+              Orphanage
+            </label>
+          </fieldset>
+        </section>
+        
+        <section>
+          <h2>Help us improve the safety of our city with your suggestions</h2>
+          <hr>
+          <fieldset>
+            <textarea name="" id="" rows="5">Your suggestion here...</textarea>
+          </fieldset>
+        </section>
+        <input id="submit" type="submit" value="Submit">
+      </form>
+    </main>
+    <footer>
+      <p>Copyright (c) 2023 &copy; Augusto Seta for freeCodeCamp 🚀</p>
+    </footer>
+  </body>
+</html>
